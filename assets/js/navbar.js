@@ -11,12 +11,12 @@ const navHtml = `  <div class="preloader ">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="/"><img src="assets/img/logo.png" alt="Mediax"></a>
+                <a href="index.html"><img src="assets/img/logo.png" alt="Mediax"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                     <li><a href="about.html">About</a></li>
                     <li>
@@ -96,14 +96,14 @@ const navHtml = `  <div class="preloader ">
                     <div class="col-auto">
                         <div class="header-logo align-content-center">
                             <div class="logo-bg" data-bg-src="assets/img/bg/logo_bg_1.png"></div>
-                            <a href="/"><img src="assets/img/logo.png" width="250" height="100" alt="Dr. Yethindra Vityala."></a>
+                            <a href="index.html"><img src="assets/img/logo.png" width="250" height="100" alt="Dr. Yethindra Vityala."></a>
                         </div>
                     </div>
                     <div class="col-auto d-none d-lg-inline-block">
                         <nav class="main-menu d-none d-lg-inline-block">
                             <ul>
                                 <li>
-                                    <a href="/">Home</a>
+                                    <a href="index.html">Home</a>
                                 </li>
                                 <li><a href="about.html">About</a></li>
                                 <li>
@@ -147,7 +147,7 @@ const navHtml = `  <div class="preloader ">
 
 $(window).on('load', function () {
     $('#navbar').html(navHtml);
-    if (!window.location.href.includes('.html')) {
+    if (!window.location.href.includes('.html') || window.location.href.includes('index')) {
         $('#navbar').find('.header-top').hide();
         $('#navbar').find('.th-header').addClass('header-layout5');
     }
