@@ -13864,9 +13864,10 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .why-feature .box-text {
-  max-width: 210px;
-  margin-left: auto;
-  margin-right: auto;
+  /* max-width: 210px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0px 20px;
 }
 
 .why-feature:hover .box-icon img {
