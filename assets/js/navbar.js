@@ -35,7 +35,7 @@ const navHtml = `  <div class="preloader ">
                         <a href="#">Lectures</a>
                     </li>
                     <li>
-                        <a href="#">Campaigns</a>
+                        <a href="campaigns.html">Campaigns</a>
                     </li>
                 </ul>
             </div>
@@ -122,7 +122,7 @@ const navHtml = `  <div class="preloader ">
                                     <a href="#">Lectures</a>
                                 </li>
                                 <li>
-                                    <a href="#">Campaigns</a>
+                                    <a href="campaigns.html">Campaigns</a>
                                 </li>
                             </ul>
                         </nav>
