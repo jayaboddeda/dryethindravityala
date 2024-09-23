@@ -23,16 +23,16 @@ const navHtml = `  <div class="preloader ">
                         <a href="publications.html">Publications</a>
                     </li>
                     <li>
-                        <a href="#">Awards</a>
+                        <a href="accomplishments.html">Accomplishments</a>
                     </li>
                     <li>
                         <a href="blog.html">Blogs</a>
                     </li>
                     <li>
-                        <a href="#">News</a>
+                        <a href="media.html">Media</a>
                     </li>
                     <li>
-                        <a href="#">Lectures</a>
+                        <a href="lectures.html">Lectures</a>
                     </li>
                     <li>
                         <a href="campaigns.html">Campaigns</a>
@@ -110,16 +110,16 @@ const navHtml = `  <div class="preloader ">
                                     <a href="publications.html">Publications</a>
                                 </li>
                                 <li>
-                                    <a href="#">Awards</a>
+                                    <a href="accomplishments.html">Accomplishments</a>
                                 </li>
                                 <li>
                                     <a href="blog.html">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href="#">News</a>
+                                    <a href="media.html">Media</a>
                                 </li>
                                 <li>
-                                    <a href="#">Lectures</a>
+                                    <a href="lectures.html">Lectures</a>
                                 </li>
                                 <li>
                                     <a href="campaigns.html">Campaigns</a>
