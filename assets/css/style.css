@@ -6890,6 +6890,7 @@ blockquote.has-very-dark-gray-color {
   border-radius: 20px;
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+  padding: 20px;
 }
 
 .blog-single .blog-title {
@@ -18736,6 +18737,9 @@ span.select2-selection.select2-selection--single:focus {
 @media (min-width: 767px) {
   .why-video1 .play-btn > i {
     --icon-size: 80px;
+  }
+  .hero-5 .hero-img img {
+    height: 100%;
   }
 }
 
