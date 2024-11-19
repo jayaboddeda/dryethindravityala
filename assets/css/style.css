@@ -1287,7 +1287,7 @@ textarea.is-invalid {
 }
 
 .th-mobile-menu ul li a:before {
-  content: '\f105';
+  /* content: '\f105'; */
   font-family: var(--icon-font);
   position: absolute;
   left: 0;

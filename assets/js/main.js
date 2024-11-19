@@ -50,84 +50,88 @@
     }
 
     /*---------- 03. Mobile Menu ----------*/
-    $.fn.thmobilemenu = function (options) {
-        var opt = $.extend(
-            {
-                menuToggleBtn: ".th-menu-toggle",
-                bodyToggleClass: "th-body-visible",
-                subMenuClass: "th-submenu",
-                subMenuParent: "th-item-has-children",
-                subMenuParentToggle: "th-active",
-                meanExpandClass: "th-mean-expand",
-                appendElement: '<span class="th-mean-expand"></span>',
-                subMenuToggleClass: "th-open",
-                toggleSpeed: 400,
-            },
-            options
-        );
-
-        return this.each(function () {
-            var menu = $(this);
+    $(window).on('load', function() {
+        $.fn.thmobilemenu = function (options) {
+            var opt = $.extend(
+                {
+                    menuToggleBtn: ".th-menu-toggle",
+                    bodyToggleClass: "th-body-visible",
+                    subMenuClass: "th-submenu",
+                    subMenuParent: "th-item-has-children",
+                    subMenuParentToggle: "th-active",
+                    meanExpandClass: "th-mean-expand",
+                    appendElement: '<span class="th-mean-expand"></span>',
+                    subMenuToggleClass: "th-open",
+                    toggleSpeed: 400,
+                },
+                options
+            );
     
-            function menuToggle() {
-                menu.toggleClass(opt.bodyToggleClass);
-    
-                var subMenu = "." + opt.subMenuClass;
-                $(subMenu).each(function () {
-                    if ($(this).hasClass(opt.subMenuToggleClass)) {
-                        $(this).removeClass(opt.subMenuToggleClass);
-                        $(this).css("display", "none");
-                        $(this).parent().removeClass(opt.subMenuParentToggle);
-                    }
+            return this.each(function () {
+                var menu = $(this);
+        
+                function menuToggle() {
+                    menu.toggleClass(opt.bodyToggleClass);
+        
+                    var subMenu = "." + opt.subMenuClass;
+                    $(subMenu).each(function () {
+                        if ($(this).hasClass(opt.subMenuToggleClass)) {
+                            $(this).removeClass(opt.subMenuToggleClass);
+                            $(this).css("display", "none");
+                            $(this).parent().removeClass(opt.subMenuParentToggle);
+                        }
+                    });
+                }
+        
+                menu.find("li").each(function () {
+                    var submenu = $(this).find("ul");
+                    submenu.addClass(opt.subMenuClass);
+                    submenu.css("display", "none");
+                    submenu.parent().addClass(opt.subMenuParent);
+                    submenu.prev("a").append(opt.appendElement);
+                    submenu.next("a").append(opt.appendElement);
                 });
-            }
+        
+                function toggleDropDown($element) {
+                    var $parent = $($element).parent();
+                    var $siblings = $parent.siblings(); 
     
-            menu.find("li").each(function () {
-                var submenu = $(this).find("ul");
-                submenu.addClass(opt.subMenuClass);
-                submenu.css("display", "none");
-                submenu.parent().addClass(opt.subMenuParent);
-                submenu.prev("a").append(opt.appendElement);
-                submenu.next("a").append(opt.appendElement);
-            });
-    
-            function toggleDropDown($element) {
-                var $parent = $($element).parent();
-                var $siblings = $parent.siblings(); 
-
-                $siblings.removeClass(opt.subMenuParentToggle);
-                $siblings.find("ul").slideUp(opt.toggleSpeed).removeClass(opt.subMenuToggleClass);
-    
-                $parent.toggleClass(opt.subMenuParentToggle);
-                $($element).next("ul").slideToggle(opt.toggleSpeed).toggleClass(opt.subMenuToggleClass);
-            }
-    
-            var expandToggler = "." + opt.meanExpandClass;
-            $(expandToggler).each(function () {
-                $(this).on("click", function (e) {
-                    e.preventDefault();
-                    toggleDropDown($(this).parent());
+                    $siblings.removeClass(opt.subMenuParentToggle);
+                    $siblings.find("ul").slideUp(opt.toggleSpeed).removeClass(opt.subMenuToggleClass);
+        
+                    $parent.toggleClass(opt.subMenuParentToggle);
+                    $($element).next("ul").slideToggle(opt.toggleSpeed).toggleClass(opt.subMenuToggleClass);
+                }
+        
+                var expandToggler = "." + opt.meanExpandClass;
+                $(expandToggler).each(function () {
+                    $(this).on("click", function (e) {
+                        e.preventDefault();
+                        toggleDropDown($(this).parent());
+                    });
                 });
-            });
-    
-            $(opt.menuToggleBtn).each(function () {
-                $(this).on("click", function () {
+        
+                $(opt.menuToggleBtn).each(function () {
+                    $(this).on("click", function () {
+                        menuToggle();
+                    });
+                });
+        
+                menu.on("click", function (e) {
+                    e.stopPropagation();
                     menuToggle();
                 });
-            });
     
-            menu.on("click", function (e) {
-                e.stopPropagation();
-                menuToggle();
+                menu.find("div").on("click", function (e) {
+                    e.stopPropagation();
+                });
             });
-
-            menu.find("div").on("click", function (e) {
-                e.stopPropagation();
-            });
-        });
-    };
-
+        };
     $(".th-menu-wrapper").thmobilemenu();
+
+    })
+    
+
 
     /*---------- 04. Sticky fix ----------*/
     $(window).scroll(function () {
