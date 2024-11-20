@@ -50,9 +50,8 @@ const navHtml = `  <div class="preloader ">
                 <div class="col-auto d-none d-lg-block">
                     <div class="header-links">
                         <ul>
-                            <li class="d-none d-sm-inline-block"><i class="fas fa-phone icon-btn"></i><b>Phone:</b> <a href="tel:+1636543569">+163-654-3569</a></li>
                             <li class="d-none d-sm-inline-block"><i class="fas fa-envelope icon-btn"></i><b>Email:</b> <a href="mailto:info@mediax.com">dryethindravityala@gmail.com</a></li>
-                            <li class="d-none d-xxl-inline-block"><i class="fas fa-location-dot icon-btn"></i> 1 Barnes Jewish Hospital Plaza, United States</li>
+                            <li class="d-none d-xxl-inline-block"><i class="fas fa-location-dot icon-btn"></i> Hyderabad</li>
                         </ul>
                     </div>
                 </div>
@@ -145,10 +144,22 @@ const navHtml = `  <div class="preloader ">
     </div>
 </header>`;
 
-$(window).on('load', function () {
-    $('#navbar').html(navHtml);
-    if (!window.location.href.includes('.html') || window.location.href.includes('index')) {
-        $('#navbar').find('.header-top').hide();
-        $('#navbar').find('.th-header').addClass('header-layout5');
+window.addEventListener('load', function () {
+    // Set the innerHTML of the navbar
+    document.getElementById('navbar').innerHTML = navHtml;
+
+    const currentUrl = window.location.href;
+    if (!currentUrl.includes('.html') || currentUrl.includes('index')) {
+        // Hide elements with class 'header-top' inside the navbar
+        const headerTop = document.querySelector('#navbar .header-top');
+        if (headerTop) {
+            headerTop.style.display = 'none';
+        }
+
+        // Add the 'header-layout5' class to elements with class 'th-header' inside the navbar
+        const thHeader = document.querySelector('#navbar .th-header');
+        if (thHeader) {
+            thHeader.classList.add('header-layout5');
+        }
     }
-})
+});

@@ -13,20 +13,15 @@ const footerHtml = `<footer class="footer-wrapper footer-layout1 footer-layout4"
                                 <div class="about-logo">
                                     <a href="/"><img src="assets/img/logo.png" alt="Mediax"></a>
                                 </div>
-                                <p class="about-text">Subscribe to out newsletter today to receive latest news
-                                    administrate cost effective for tactical data.</p>
+                                <p class="about-text">Subscribe to our newsletter for the latest updates on medical breakthroughs, healthcare insights, and expert advice.</p>
                                 <p class="footer-info">
                                     <i class="fal fa-location-dot"></i>
-                                    2478 Street City Ohio 90255
+                                    Hyderabad
                                 </p>
                                 <p class="footer-info">
                                     <i class="fal fa-envelope"></i>
                                     <a href="mailto:dryethindravityala@gmail.com"
                                         class="info-box_link">dryethindravityala@gmail.com</a>
-                                </p>
-                                <p class="footer-info">
-                                    <i class="fal fa-phone"></i>
-                                    <a href="tel:+40276328246" class="info-box_link">+(402) 763 282 46</a>
                                 </p>
                             </div>
                         </div>
@@ -37,10 +32,7 @@ const footerHtml = `<footer class="footer-wrapper footer-layout1 footer-layout4"
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="about.html">About</a></li>
-                                    <li><a href="about.html">Terms of Use</a></li>
-                                    <li><a href="faq.html">Help & FAQs</a></li>
                                     <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="about.html">Privacy policy</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
                             </div>
@@ -100,7 +92,7 @@ const footerHtml = `<footer class="footer-wrapper footer-layout1 footer-layout4"
                     <div class="col-md-7">
                         <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2024 <a href="/">Dr.
                             Vityala Yethindra</a>. <br> All Rights Reserved.Designed & Developed by
-                            <a href="https://webbingprotechnologies.com/" target="_blank">WebbingPro Technologies</a> - <a href="tel:9059329297">9059329297</a></p>
+                            <a href="https://webbingprotechnologies.com/" target="_blank">WebbingPro Technologies</a></p>
                     </div>
                     <div class="col-md-5 text-center text-md-end">
                         <div class="th-social">
@@ -117,6 +109,8 @@ const footerHtml = `<footer class="footer-wrapper footer-layout1 footer-layout4"
         </div>
     </footer>`;
 
-$(window).on('load', function () {
-    $('#footer').html(footerHtml);
-})
+    window.addEventListener('load', function () {
+        // Set the innerHTML of the footer
+        document.getElementById('footer').innerHTML = footerHtml;
+    });
+    
