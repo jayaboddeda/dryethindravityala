@@ -50,7 +50,7 @@ const navHtml = `  <div class="preloader ">
                 <div class="col-auto d-none d-lg-block">
                     <div class="header-links">
                         <ul>
-                            <li class="d-none d-sm-inline-block"><i class="fas fa-envelope icon-btn"></i><b>Email:</b> <a href="mailto:info@mediax.com">dryethindravityala@gmail.com</a></li>
+                            <li class="d-none d-sm-inline-block"><i class="fas fa-envelope icon-btn"></i><b>Email:</b> <a href="mailto:dryethindravityala@gmail.com">dryethindravityala@gmail.com</a></li>
                             <li class="d-none d-xxl-inline-block"><i class="fas fa-location-dot icon-btn"></i> Hyderabad</li>
                         </ul>
                     </div>
@@ -95,7 +95,7 @@ const navHtml = `  <div class="preloader ">
                     <div class="col-auto">
                         <div class="header-logo align-content-center">
                             <div class="logo-bg" data-bg-src="assets/img/bg/logo_bg_1.png"></div>
-                            <a href="index.html"><img src="assets/img/logo.png" width="250" height="100" alt="Dr. Yethindra Vityala."></a>
+                            <a href="index.html"><img src="assets/img/logo.png" width="300" height="100" alt="Dr. Yethindra Vityala."></a>
                         </div>
                     </div>
                     <div class="col-auto d-none d-lg-inline-block">

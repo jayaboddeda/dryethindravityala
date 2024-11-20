@@ -10,7 +10,7 @@ const footerHtml = `<footer class="footer-wrapper footer-layout1 footer-layout4"
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
-                                <div class="about-logo">
+                                <div class="about-logo d-none">
                                     <a href="/"><img src="assets/img/logo.png" alt="Mediax"></a>
                                 </div>
                                 <p class="about-text">Subscribe to our newsletter for the latest updates on medical breakthroughs, healthcare insights, and expert advice.</p>
