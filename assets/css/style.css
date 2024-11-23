@@ -2316,6 +2316,7 @@ hr.title-line {
 .box-icon img {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
+  padding: 8px;
 }
 
 .box-text {
