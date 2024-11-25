@@ -109,7 +109,7 @@ const footerHtml = `<footer class="footer-wrapper footer-layout1 footer-layout4"
         </div>
     </footer>`;
 
-    window.addEventListener('load', function () {
+    window.addEventListener('DOMContentLoaded', function () {
         // Set the innerHTML of the footer
         document.getElementById('footer').innerHTML = footerHtml;
     });

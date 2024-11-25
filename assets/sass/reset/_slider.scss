@@ -137,7 +137,7 @@
     .slider-arrow {
         opacity: 0;
         visibility: hidden;
-        transform: scale(0.4);
+        transform: scale(1);
         @include xl {
             display: none;
         }
