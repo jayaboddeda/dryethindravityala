@@ -144,11 +144,18 @@ const navHtml = `  <div class="preloader ">
     </div>
 </header>`;
 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     // Set the innerHTML of the navbar
-    document.getElementById('navbar').innerHTML = navHtml;
+    const navbar = document.getElementById('navbar');
+
+    // Optional: Show a lightweight placeholder until the navbar loads
+    navbar.innerHTML = `<div style="text-align: center; padding: 10px;">Loading...</div>`;
+
+    // Inject the navbar HTML
+    navbar.innerHTML = navHtml;
 
     const currentUrl = window.location.href;
+
     if (!currentUrl.includes('.html') || currentUrl.includes('index')) {
         // Hide elements with class 'header-top' inside the navbar
         const headerTop = document.querySelector('#navbar .header-top');
